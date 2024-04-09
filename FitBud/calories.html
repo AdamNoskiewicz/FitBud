@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obliczanie kalorii</title>
+  <link rel="stylesheet" href="css/mealsummary.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+<!-- Sekcja nagłówka -->
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Strona Główna</a></li>
+        <li><a href="userPage.html">Panel Użytkownika</a></li>
+    </ul>
+  </nav>
+</header>
+
+<!-- Sekcja kalorii -->
+<section id="calories">
+  <div class="container">
+    <div class="card">
+      <div class="card-content">
+        <div class="calories-section">
+          <h2>Obliczanie dziennego zapotrzebowania kalorycznego</h2>
+          <br>
+          <form id="calories-form">
+            <input type="number" id="age" placeholder="Wiek" required>
+            <select id="gender" required>
+              <option value="" disabled selected>Wybierz płeć</option>
+              <option value="male">Mężczyzna</option>
+              <option value="female">Kobieta</option>
+            </select>
+            <input type="number" id="weight" placeholder="Waga (w kg)" required>
+            <input type="number" id="height" placeholder="Wzrost (w cm)" required>
+            <select id="activity-level" required>
+              <option value="" disabled selected>Wybierz poziom aktywności</option>
+              <option value="1.2">Siedzący tryb życia (brak aktywności fizycznej)</option>
+              <option value="1.375">Lekko aktywny (lekka aktywność fizyczna 1-3 razy w tygodniu)</option>
+              <option value="1.55">Średnio aktywny (umiarkowana aktywność fizyczna 3-5 razy w tygodniu)</option>
+              <option value="1.725">Bardzo aktywny (intensywna aktywność fizyczna 6-7 razy w tygodniu)</option>
+              <option value="1.9">Wyjątkowo aktywny (bardzo intensywna aktywność fizyczna i praca fizyczna lub 2x trening)</option>
+            </select>
+            <select id="goal" required>
+              <option value="" disabled selected>Wybierz cel</option>
+              <option value="maintenance">Utrzymanie wagi</option>
+              <option value="weight-loss">Zmniejszenie wagi</option>
+              <option value="weight-gain">Zwiększenie wagi</option>
+            </select>
+            <br><br>
+            <button type="submit">Oblicz</button>
+          </form>
+          <br>
+          <div id="calories-result"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="login">
+  <p>&copy; 2023 FitBud . All rights reserved</p>
+</footer>
+
+<script src="js/calories.js"></script>
+</body>
+
+</html>

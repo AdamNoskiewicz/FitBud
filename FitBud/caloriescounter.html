@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/caloriesCounter.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Obliczanie makroskładników posiłku</title>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Strona Główna</a></li>
+            <li><a href="userPage.html">Panel Użytkownika</a></li>
+        </ul>
+    </nav>
+</header>
+<h1 style="padding-top: 25px; padding-bottom: 25px;">Obliczanie makroskładników posiłku</h1>
+<br>
+
+<div style="padding: 100px; padding-top: 0px;">
+    <div id="add" style="display: none;">
+        <h2>Dodane rzeczy:</h2>
+        <table id="addedItems">
+            <thead>
+            <tr>
+                <th>Kategoria</th>
+                <th>Nazwa</th>
+                <th>Waga</th>
+                <th>Kalorie</th>
+                <th>Węglowodany</th>
+                <th>Białka</th>
+                <th>Tłuszcze</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <h2>Makroskładniki dania:</h2>
+        <table id="mealProperties">
+            <thead>
+            <tr>
+                <th>Kalorie</th>
+                <th>Węglowodany</th>
+                <th>Białka</th>
+                <th>Tłuszcze</th>
+            </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+        <button id="downloadButton">Pobierz listę</button>
+    </div>
+
+    <div class="categories-container">
+        <div class="category">
+            <h2>Nabiał</h2>
+            <label for="dairyList">Składnik:</label>
+            <select id="dairyList"></select>
+            <label for="dairyQuantity">Waga w gramach:</label>
+            <input type="number" id="dairyQuantity">
+            <button id="addDairyButton">Dodaj składnik</button>
+        </div>
+
+        <div class="category">
+            <h2>Owoce</h2>
+            <label for="fruitList">Składnik:</label>
+            <select id="fruitList"></select>
+            <label for="fruitQuantity">Waga:</label>
+            <input type="number" id="fruitQuantity">
+            <button id="addFruitButton">Dodaj składnik</button>
+        </div>
+
+        <div class="category">
+            <h2>Warzywa</h2>
+            <label for="vegetableList">Składnik:</label>
+            <select id="vegetableList"></select>
+            <label for="vegetableQuantity">Waga:</label>
+            <input type="number" id="vegetableQuantity">
+            <button id="addVegetableButton">Dodaj składnik</button>
+        </div>
+        <div class="category">
+            <h2>Kasze, Makarony, Zboża</h2>
+            <label for="wheatList">Składnik:</label>
+            <select id="wheatList"></select>
+            <label for="wheatQuantity">Waga:</label>
+            <input type="number" id="wheatQuantity">
+            <button id="addWheatButton">Dodaj składnik</button>
+        </div>
+        <div class="category">
+            <h2>Pieczywo</h2>
+            <label for="breadList">Składnik:</label>
+            <select id="breadList"></select>
+            <label for="breadQuantity">Waga:</label>
+            <input type="number" id="breadQuantity">
+            <button id="addBreadButton">Dodaj składnik</button>
+        </div>
+        <div class="category">
+            <h2>Mięso</h2>
+            <label for="meatList">Składnik:</label>
+            <select id="meatList"></select>
+            <label for="meatQuantity">Waga:</label>
+            <input type="number" id="meatQuantity">
+            <button id="addMeatButton">Dodaj składnik</button>
+        </div>
+        <div class="category">
+            <h2>Ryby i owoce morza</h2>
+            <label for="fishList">Składnik:</label>
+            <select id="fishList"></select>
+            <label for="fishQuantity">Waga:</label>
+            <input type="number" id="fishQuantity">
+            <button id="addFishButton">Dodaj składnik</button>
+        </div>
+        <div class="category">
+            <h2>Dodatki</h2>
+            <label for="addonsList">Składnik:</label>
+            <select id="addonsList"></select>
+            <label for="addonsQuantity">Waga:</label>
+            <input type="number" id="addonsQuantity">
+            <button id="addAddonButton">Dodaj składnik</button>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>© 2023 FitBud . All rights reserved</p>
+</footer>
+
+
+
+<script src="js/productsDatabase.js"></script>
+<script src="js/caloriescounter.js"></script>
+</body>
+</html>

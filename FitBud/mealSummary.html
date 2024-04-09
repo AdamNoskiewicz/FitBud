@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Kalkulator Kalorii i Makroskładników</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/mealsummary.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Strona Główna</a></li>
+      <li><a href="userPage.html">Panel Użytkownika</a></li>
+    </ul>
+  </nav>
+</header>
+<h1 style="padding-top: 25px; padding-bottom: 25px;">Kalkulator dostarczoncyh makroskładników w wielu posiłkach</h1>
+<br>
+
+<div style="padding: 100px; padding-top: 0px;">
+  <div class="meal-form">
+    <h2>Dodaj posiłek</h2>
+    <label for="meal-name">Nazwa posiłku:</label>
+    <input type="text" id="meal-name" />
+    <label for="calories">Kalorie:</label>
+    <input type="number" id="calories" />
+    <label for="protein">Białko:</label>
+    <input type="number" id="protein" />
+    <label for="carbs">Węglowodany:</label>
+    <input type="number" id="carbs" />
+    <label for="fat">Tłuszcze:</label>
+    <input type="number" id="fat" />
+    <button onclick="addMeal()">Dodaj posiłek</button>
+  </div>
+  
+  <div id="result" style="display: none;">
+    <div id="summary">
+      <h2>Podsumowanie</h2>
+      <p><strong>Ilość spożytych posiłków:</strong> <span id="meal-count">0</span></p>
+      <p><strong>Suma kalorii:</strong> <span id="total-calories">0</span></p>
+      <p><strong>Suma białka:</strong> <span id="total-protein">0</span></p>
+      <p><strong>Suma węglowodanów:</strong> <span id="total-carbs">0</span></p>
+      <p><strong>Suma tłuszczów:</strong> <span id="total-fat">0</span></p>
+      <button onclick="downloadSummary()">Pobierz podsumowanie</button>
+      <h2 style="padding-top: 15px;">Lista posiłków</h2>
+      <ul id="meal-list"></ul>
+    </div>
+  </div>
+</div>
+
+<footer class="login">
+  <p>&copy; 2023 FitBud . All rights reserved</p>
+</footer>
+
+<script src="js/mealSummary.js"></script>
+</body>
+</html>

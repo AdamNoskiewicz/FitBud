@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaloguj się</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+<script>
+
+</script>
+
+<header>
+  <nav>
+    <ul>
+      <li><a href="index.html">Strona Główna</a></li>
+
+    </ul>
+  </nav>
+</header>
+
+<section id="login-register">
+  <div class="container">
+    <div class="card">
+      <div class="card-content">
+        <div class="login-section">
+          <h2>Login</h2>
+          <form id="login-form"> <!-- Update the form action to "calories.html" -->
+            <input type="text" name="username" id="lusername-input" placeholder="Username" required>
+            <input type="password" name="password" id="lpassword-input" placeholder="Password" required>
+            <div class="login-error-message error-message" style="display: none;">Nie ma takiego użytkownika!</div>
+            <button type="submit">Login</button>
+          </form>
+        </div>
+        <br>
+        <div class="register-section">
+          <h2>Register</h2>
+          <form id="register-form">
+            <input type="text" name="username" id="rusername-input" placeholder="Username" required>
+            <input type="password" name="password" id="rpassword-input" placeholder="Password" required>
+            <input type="text" name="email" id="remail-input" placeholder="Email" required>
+            <div class="register-message success-message" style="display: none;">Żądanie utworzenia konta zostało wysłane. Po weryfikacji otrzymasz powiadomienie na podany email!</div>
+            <button type="submit" id="register-btn">Register</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="login">
+  <p>&copy; 2023 FitBud . All rights reserved</p>
+</footer>
+<script src="js/users.js"></script>
+<script src="js/login.js"></script>
+</body>
+</html>
